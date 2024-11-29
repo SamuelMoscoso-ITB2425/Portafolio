@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 1</title>
+    <link rel="stylesheet" href="css/stylesp1.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="barra">
+        <div class="menu-hamburguesa" id="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="menu" class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html">Sobre mí</a></li>
+            <li><a href="lp.html" id="proyectos-link">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li class="home-icon">
+                <a href="index.html">
+                    <img src="images/home.png" alt="Home Icon" class="home-button">
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Proyecto 1</h1>
+    </header>
+    
+    <section class="contenido">
+        <!-- Caja para la imagen y texto -->
+        <div class="caja-imagen">
+            <button class="flecha izquierda" onclick="cambiarImagen(-1)">&#8592;</button>
+            <div class="imagen-container">
+                <img id="imagen-proyecto" src="images/Proyecto1.png" alt="Imagen Proyecto 1">
+            </div>
+            <button class="flecha derecha" onclick="cambiarImagen(1)">&#8594;</button>
+        </div>
+        
+        <!-- Texto descriptivo -->
+        <div class="descripcion">
+            <p id="descripcion-texto">
+                Descripción del Proyecto: Descripción del Proyecto 1: Gracías al VirtualBox hemos instalado diversos sistemas operativos en un mismo oredador, a su vez cada una de estas VM puede tener mas de un sistema operativo dentro de el.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <footer class="footer">
+        <section id="contacto">
+            <p>Información de Contacto: samuel.moscoso.7e8@itb.cat | Tel: 123-456-7890</p>
+            <button id="contact-form-button" class="contact-button">Formulario de Contacto</button>
+            <div class="social-icons">
+                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjc4tSS0P-JAxXGVPEDHaerC8kQFnoECA0QAQ&url=https%3A%2F%2Fgithub.com%2F&usg=AOvVaw38IHvcyBra8HGhmSxvlCGw&opi=89978449" target="_blank"><img src="images/github.png" alt="Icono 1"></a>
+                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjY8My00P-JAxUYQvEDHU2HAwUQFnoECA0QAQ&url=https%3A%2F%2Fwww.instagram.com%2F&usg=AOvVaw1cBeRoOpMhZ3-x5M1sA3Fm&opi=89978449" target="_blank"><img src="images/Instagram.png" alt="Icono 2"></a>
+                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi0huLU0P-JAxV_SvEDHYPpF3YQFnoECAwQAQ&url=https%3A%2F%2Fes.linkedin.com%2F&usg=AOvVaw3ao7isY9xFsjr_4UTy0kO_&opi=89978449" target="_blank"><img src="images/linkedin.png" alt="Icono 3"></a>
+            </div>
+        </section>
+        <p class="copyright">© <span id="year"></span> Samuel & Co. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="contact-form-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <button id="close-form" class="close-btn" aria-label="Cerrar">✖</button>
+            <h2 id="modal-title">Formulario de Contacto</h2>
+            <div class="form-container">
+                <form id="contact-form">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                    <p id="name-error" class="error-message"></p>
+    
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                    <p id="email-error" class="error-message"></p>
+    
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <p id="message-error" class="error-message"></p>
+    
+                    <div class="form-buttons">
+                        <button type="submit" class="submit-btn">Enviar</button>
+                        <button type="button" class="cancel-btn" id="cancel-form">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="validation-box" id="validationBox"></div>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/p1.js"></script>
+</body>
+</html>
